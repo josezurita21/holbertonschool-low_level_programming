@@ -1,24 +1,25 @@
 #include <stdio.h>
-
 /**
-  * main - Prints a hexadecimal string
-  *
-  */
+ * main - prints all numbers of base 16
+(*
+ * Return: 0
+ */
 int main(void)
 {
-	char c;
+	int i = '0';
 
-	for (c = '0'; c <= '9'; c++)
+	while (i <= '9')
 	{
-		putchar(c);
+		putchar(i);
+		i++;
 	}
-
-	for (c = 'a'; c <= 'f'; c++)
+	i = 'a';
+	while (i <= 'f')
 	{
-		putchar(c);
+		putchar(i);
+		i++;
 	}
-
 	putchar('\n');
-
 	return (0);
+
 }
