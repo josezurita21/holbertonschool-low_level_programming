@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-/*
- * main - program that prints all the numbers 
- * of base 16 in lowercase, 
- * followed by a new line
- * */
+/**
+  * main - Prints a hexadecimal string
+  *
+  */
 int main(void)
 {
 	char c;
