@@ -1,4 +1,9 @@
 #include <stdio.h>
+/**
+ * main - print numbers from 00 to 89
+ *
+ * Return: 0 
+ */
 int main(void)
 {
 	int i = '0';
