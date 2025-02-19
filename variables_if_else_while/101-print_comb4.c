@@ -1,32 +1,37 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of three different digits,
- *        in ascending order, separated by a comma followed by a space.
- *
- * Return: Always 0.
- */
+  * main - Prints 3 combination of numbers
+  *
+  * Return: Always (Success)
+  */
 int main(void)
 {
-	int a, b, c;
+	int c, i, k;
 
-	for (a = 0; a < 8; a++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		for (b = a + 1; b < 9; b++)
+		for (i = '0'; i <= '9'; i++)
 		{
-			for (c = b + 1; c < 10; c++)
+			for (k = '0'; k <= '9'; k++)
 			{
-				putchar((a % 10) + '0');
-				putchar((b % 10) + '0');
-				putchar((c % 10) + '0');
-				if (a == 7 && b == 8 && c == 9)
-				continue;		
-				putchar(',');
-				putchar(' ');
+				if (c < i && i < k)
+				{
+					putchar(c);
+					putchar(i);
+					putchar(k);
+
+					if (c != '7')
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
 			}
 		}
 	}
 
 	putchar('\n');
+
 	return (0);
 }
