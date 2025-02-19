@@ -1,27 +1,31 @@
 #include <stdio.h>
-
 int main(void)
 {
-    int i;
-    int j;
-    	for (i = 0; i <= 8; i++)
-   {       
-	   for (j = i + 1; j <= 9; j++)
-        {
-          	 putchar(i + '0');
-           	 putchar(j + '0');
+	int i = '0';
+	int j = '0';
 
-       
-           	 if (i != 8 || j != 9)
-            	{
-                	putchar(',');
-                	putchar(' ');
-            }
-        }
-    }
-
-  
-    putchar('\n');
-
-    return (0);
+	while (i <= '9')
+	{
+		while (j <= '9')
+		{
+			if (!(i > j || i == j))
+			{
+				putchar(i);
+				putchar(j);
+				if (i == '8' && j == '9')
+				{
+					putchar('\n');
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			j++;
+		}
+		j = '0';
+		i++;
+	}
+	return (0);
 }
